@@ -1,0 +1,140 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoviesWorld</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button id="back-btn">&larr;</button>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Αναζήτηση..." />
+    </div>
+    <h1>MOVIESWORLD</h1>
+    <div class="nav-buttons">
+      <button>Αρχική</button>
+      <div class="dropdown">
+        <button>Είδη</button>
+        <div class="dropdown-content">
+          <p>ΔΡΑΜΑΤΙΚΕΣ ΣΕΙΡΕΣ</p>
+          <p>ΠΕΡΙΠΕΤΕΙΕΣ</p>
+          <p>ΚΑΘΗΛΩΤΙΚΕΣ ΣΕΙΡΕΣ</p>
+          <p>ΚΩΜΙΚΕΣ ΣΕΙΡΕΣ</p>
+        </div>
+      </div>
+    </div>
+
+ 
+    <a href="index.html">
+      <img src="logo.png" alt="Logo" class="logo" />
+    </a>
+  </div>
+
+
+  <section class="categories">
+    <div class="category">
+      <h3>ΔΡΑΜΑΤΙΚΕΣ ΣΕΙΡΕΣ</h3>
+      <div class="image-row">
+        <div class="movie-item">
+          <img src="snowfall.jpg" class="thumbnail" alt="Snowfall">
+          <p class="movie-title">Snowfall</p>
+        </div>
+        <div class="movie-item">
+          <img src="topboy.jpg" class="thumbnail" alt="Top Boy">
+          <p class="movie-title">Top Boy</p>
+        </div>
+        <div class="movie-item">
+          <img src="sons.jpg" class="thumbnail" alt="Sons of Anarchy">
+          <p class="movie-title">Sons of Anarchy</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>ΠΕΡΙΠΕΤΕΙΕΣ</h3>
+      <div class="image-row">
+        <div class="movie-item">
+          <img src="deadboy.jpg" class="thumbnail" alt="Deadboy">
+          <p class="movie-title">Deadboy</p>
+        </div>
+        <div class="movie-item">
+          <img src="agatha.jpg" class="thumbnail" alt="Agatha">
+          <p class="movie-title">Agatha</p>
+        </div>
+        <div class="movie-item">
+          <img src="american.jpg" class="thumbnail" alt="American">
+          <p class="movie-title">American</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>ΚΑΘΗΛΩΤΙΚΕΣ ΣΕΙΡΕΣ</h3>
+      <div class="image-row">
+        <div class="movie-item">
+          <img src="dope.jpg" class="thumbnail" alt="Dope">
+          <p class="movie-title">Dope</p>
+        </div>
+        <div class="movie-item">
+          <img src="doc.jpg" class="thumbnail" alt="Doc">
+          <p class="movie-title">Doc</p>
+        </div>
+        <div class="movie-item">
+          <img src="ncis.jpg" class="thumbnail" alt="NCIS">
+          <p class="movie-title">NCIS</p>
+        </div>
+      </div>
+    </div> 
+
+    <div class="category">
+      <h3>ΚΩΜΙΚΕΣ ΣΕΙΡΕΣ</h3>
+      <div class="image-row">
+        <div class="movie-item">
+          <img src="point.jpg" class="thumbnail" alt="Point">
+          <p class="movie-title">Point</p>
+        </div>
+        <div class="movie-item">
+          <img src="oneday.jpg" class="thumbnail" alt="One Day">
+          <p class="movie-title">One Day</p>
+        </div>
+        <div class="movie-item">
+          <img src="kitty.jpg" class="thumbnail" alt="Kitty">
+          <p class="movie-title">Kitty</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ΠΛΗΡΗΣ ΠΡΟΒΟΛΗ -->
+  <div id="fullscreen-container" class="hidden">
+    <button id="close-fullscreen">Πίσω</button>
+    <img id="fullscreen-image" src="" alt="Fullscreen">
+    <div id="description">
+      <h2>Περιγραφή</h2>
+      <p>Εδώ θα εμφανίζεται η περιγραφή της επιλεγμένης ταινίας.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="left-panel">
+      <div class="image-row">
+        <!-- Προαιρετικά thumbnails -->
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <!-- περιεχόμενο fullscreen εδώ είναι ήδη εκτός main -->
+      <footer>
+        <div class="footer-buttons">
+          <!-- Πλήκτρα ελέγχου -->
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
