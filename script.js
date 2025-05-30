@@ -1,26 +1,22 @@
 // script.js
- 
-// Βρίσκουμε όλα τα thumbnails
+
 const thumbnails = document.querySelectorAll('.thumbnail');
  
-// Επιλέγουμε το container του fullscreen και τα επιμέρους στοιχεία
+
 const fullscreenContainer = document.getElementById('fullscreen-container');
 const fullscreenImage = document.getElementById('fullscreen-image');
 const description = document.getElementById('description');
- 
-// Όταν κάνεις κλικ σε ένα thumbnail, εμφανίζεται το fullscreen
+
 thumbnails.forEach(thumbnail => {
   thumbnail.addEventListener('click', () => {
     fullscreenImage.src = thumbnail.src;
     fullscreenContainer.classList.remove('hidden');
  
-    // Εδώ μπορείς να ορίσεις ξεχωριστή περιγραφή για κάθε εικόνα
-    // Παράδειγμα με alt:
+
     description.querySelector('p').textContent = thumbnail.alt || 'Περιγραφή ταινίας';
   });
 });
- 
-// Πατώντας εκτός του fullscreen ή του image, το κλείνει
+
 fullscreenContainer.addEventListener('click', (e) => {
   if (!e.target.closest('#fullscreen-image') && !e.target.closest('#description')) {
     fullscreenContainer.classList.add('hidden');
@@ -41,13 +37,12 @@ searchInput.addEventListener('input', () => {
     movie.style.display = title.includes(query) ? 'flex' : 'none';
   });
 });
-// Όταν κάνεις κλικ σε ένα thumbnail, εμφανίζεται το fullscreen
+
 thumbnails.forEach(thumbnail => {
   thumbnail.addEventListener('click', () => {
     fullscreenImage.src = thumbnail.src;
     fullscreenContainer.classList.remove('hidden');
 
-    // Περιγραφές ταινιών
     const descriptions = {
       'snowfall.jpg': 'Ο φρανκλιν και η παρέα του προσπαθούν να επιβιώσουν στους δρόμους τις αμερικής', 
       'topboy.jpg': 'Ολα αρχίζουν απο 2 φιλους που θελουν να κατακτήσουν τον κόσμο κάνωντας τα πάντα για να πετύχουν τον στόχο τους ',   
@@ -63,7 +58,6 @@ thumbnails.forEach(thumbnail => {
       'kitty.jpg': 'Η ταινία Cat Postale, αφηγείται το οδοιπορικό μιας ομάδας αδέσποτων γατών σε ένα Κυκλαδίτικο νησί κατά τη διάρκεια ενός χειμώνα όπου έχουν εξαφανιστεί οι άνθρωποι. Η ιστορία αποτελεί ένα μικρό απόσπασμα από το βιβλίο του Ζαχαρία Μαυροειδή, “Εφτά ψυχές στο στόμα”.'
     };
 
-    // Βρες την περιγραφή με βάση το όνομα του αρχείου
     const filename = thumbnail.src.split('/').pop(); // παίρνει μόνο το "xxx.jpg"
     description.querySelector('p').textContent = descriptions[filename] || 'Δεν υπάρχει περιγραφή.';
   });
